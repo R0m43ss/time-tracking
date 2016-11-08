@@ -1,0 +1,17 @@
+<template name="note">
+  <li>
+	  <p>
+	     <b>{{project}}.</b> {{text}} 
+		 <br> 
+		 From {{getDate}}
+	  </p>
+	  <input type="button" class="edit-note" value="Edit">
+	  <input type="button" class="delete-note" value="Delete">
+	  {{#if show}}
+	    <form class="edit-form" id="edit_note{{_id}}">
+	      <input type="text" id="note_text{{_id}}" placeholder="Comment (optional)" value={{text}} />
+		  <button class="save">Save</button>
+	    </form>
+	  {{/if}}
+  </li>
+</template>

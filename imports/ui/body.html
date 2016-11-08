@@ -1,0 +1,25 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Time Tracking</h1>
+	  <form class="new-note" id="new_note">
+	    <select id="note_project">
+	      <option>Project A</option>
+		  <option>Project B</option>
+		  <option>Project C</option>
+		  <option>Project D</option>
+	    </select>
+	    <input type="text" id="note_text" placeholder="Comment (optional)" />
+	  </form>
+	  <br>
+	  <input type="button" class="add-note" form="new_note" value="Add note">
+    </header>
+    <ul>
+      {{#each notes}}
+        {{> note}}
+      {{/each}}
+    </ul>
+	<button class="prev">Previous</button>
+	<button class="next">Next</button>
+  </div>
+</body>
